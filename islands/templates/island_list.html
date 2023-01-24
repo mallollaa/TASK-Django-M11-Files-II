@@ -1,12 +1,15 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ships</title>
   </head>
   <body>
+    <div class="box">
     <main>
       <article>
         <h1>Islands</h1>
@@ -16,7 +19,7 @@
           <div>
             <h2>{{ island.name }} Photos</h2>
             {% for photo in island.photos.all %}
-            <img src="" alt="{{ island.name }}" />
+            <img src="photo.image.url" alt="{{ island.name }}" />
             {% endfor %}
           </div>
           {% endfor %}
@@ -25,6 +28,6 @@
         <p>No islands yet.</p>
         {% endif %}
       </article>
-    </main>
+    </main></div>
   </body>
 </html>
